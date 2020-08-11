@@ -2,6 +2,12 @@ import React from 'react';
 import Post from './Post/Post';
 
 const Posts = () => {
+    let posts = [
+        {id: 1, message: "What's going on here?", likesCount:5},
+        {id: 2, message: "how are you?", likesCount:10},
+    ];
+    let postsElem = posts.map((elem) => <Post likesCount={elem.likesCount} message={elem.message} />)
+    
     return (
         <div className="posts">
             <div className="posts__form">
@@ -12,10 +18,7 @@ const Posts = () => {
             </div>
             <h2>My posts</h2>
             <div className="posts__container">
-                <Post likesCount="5" message="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, harum.1" />
-                <Post likesCount="10" message="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, harum.2" />
-                <Post likesCount="15" message="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, harum.3" />
-                <Post likesCount="20" message="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, harum.4" />
+                {postsElem}
             </div>
         </div>
     );

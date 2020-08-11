@@ -19,11 +19,11 @@ const App = () => {
           <div className="container">
             <Navbar />
             <div className="main_content">
-              <Route path='/profile' component={Content} />
-              <Route path='/dialogs' component={Dialogs} />
-              <Route path='/music' component={Music} />
-              <Route path='/news' component={News} />
-              <Route path='/settings' component={Settings} />
+              <Route path='/profile' render={ () => <Content />} />
+              <Route path='/dialogs' render={ () => <Dialogs />} />
+              <Route path='/music' render={ () => <Music />} />
+              <Route path='/news' render={ () => <News />} />
+              <Route path='/settings' render={ () => <Settings />} />
             </div>
           </div>
         </main>
