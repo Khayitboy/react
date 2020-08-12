@@ -2,11 +2,13 @@ import React from 'react';
 import Posts from './Posts/Posts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Content = () => {
+const Content = (props) => {
+  
+
     return (
         <div>
             <ProfileInfo />
-            <Posts />
+            <Posts posts={props.posts} />
         </div>
     );
 }
