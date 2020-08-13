@@ -26,3 +26,30 @@
 .dialog{
     margin-bottom: 15px;
 }
+.message_form textarea{
+    display: block;
+    width:100%;
+    margin-top: 20px;
+    height:200px;
+    border-radius:5px;
+    padding:6px 12px;
+    outline: none;
+    box-shadow:2px 5px 12px rgba(0,0,0,0.09);
+    transition: all 0.3s;
+  }
+  .message_form button{
+    background-color: #61DAFB;
+    width:180px;
+    height:40px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius:4px;
+    margin:25px 0 15px 0;
+    border:1px solid #61DAFB;
+    box-shadow:2px 5px 12px rgba(0,0,0,0.09);
+  }
+  .message_form textarea:focus{
+    box-shadow:1px 2px 5px #61DAFB;
+  }
