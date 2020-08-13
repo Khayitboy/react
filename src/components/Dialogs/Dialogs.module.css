@@ -28,9 +28,9 @@
 }
 .message_form textarea{
     display: block;
-    width:100%;
+    width:360px;
     margin-top: 20px;
-    height:200px;
+    height:100px;
     border-radius:5px;
     padding:6px 12px;
     outline: none;
