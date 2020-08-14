@@ -26,7 +26,7 @@ const Dialogs = (props) => {
                 <div className={style.message_form}>
                     <form action="">
                         <textarea ref={messageText}></textarea>
-                        <button onClick={btnMessage}>Create Post</button>
+                        <button onClick={btnMessage} type="button">Create Post</button>
                     </form>
                 </div>
             </div>
