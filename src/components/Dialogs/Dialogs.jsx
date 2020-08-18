@@ -2,20 +2,27 @@ import React from 'react';
 import style from './Dialogs.module.css';
 import Dialog from './DialogItem/DialogItem';
 import Message from './Message/Message';
+import { updateNewPost, addMessage, updateMessage } from '../../redux/state';
 
 const Dialogs = (props) => {
     
    
-    let dialogsElem = props.state.dialogs.map((elem) => <Dialog name={elem.name} id={elem.id}/>)
+    let dialogsElem = props.dialogsPage.dialogs.map((elem) => <Dialog name={elem.name} id={elem.id}/>)
 
-    let messagesElem = props.state.messages.map((elem) => <Message message={elem.message}/>)
+    let messagesElem = props.dialogsPage.messages.map((elem) => <Message message={elem.message}/>)
 
     let messageText = React.createRef();
 
-    let btnMessage = () => {
-        let text = messageText.current.value;
-        alert(text);
+    let addMessage2 = () => {
+        props.addMessage();
     } 
+
+    let onMessageChange2 = () => {
+        let text = messageText.current.value;
+        props.updateMessage(text);
+    } 
+
+
     return (
         <div className={style.dialogs_wrapper}>
             <div className={style.users}>
@@ -25,8 +32,8 @@ const Dialogs = (props) => {
                 {messagesElem}
                 <div className={style.message_form}>
                     <form action="">
-                        <textarea ref={messageText}></textarea>
-                        <button onClick={btnMessage} type="button">Create Post</button>
+                        <textarea ref={messageText} value={props.dialogsPage.newMessage} onChange={onMessageChange2}></textarea>
+                        <button onClick={addMessage2} type="button">Send</button>
                     </form>
                 </div>
             </div>
