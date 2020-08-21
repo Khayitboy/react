@@ -1,3 +1,7 @@
+const ADDPOST = 'ADD-POST';
+const UPDATEPOST = 'UPDATE-NEW-POST';
+const ADDMESSAGE = 'ADD-MESSAGE';
+const UPDATEMESSAGE = 'UPDATE-MESSAGE';
 let store = {
     _state: {
         profilePage: {
@@ -58,10 +62,10 @@ let store = {
         this._callSubscriber(this._state);
     }, 
     dispatch(action) {
-        if(action.type === 'ADD-POST'){
+        if(action.type === ADDPOST){
             this._addPost();
         }
-        else if(action.type === 'UPDATE-NEW-POST'){
+        else if(action.type === UPDATEPOST){
             this._updateNewPost(action.newText);
         }
         else if(action.type === 'ADD-MESSAGE'){
@@ -73,5 +77,28 @@ let store = {
     },
 }
 
+
+export const addPostActionCreator = () => {
+    return {
+        type: ADDPOST
+    }
+}
+
+export const onPostChangeActionCreator = (text) => {
+    return {
+        type:UPDATEPOST,
+        newText:text
+    }
+}
+export const addMessageActionCreator = () => {
+    return {
+        type:ADDMESSAGE
+    }
+}
+export const onMessageChangeActionCreator = (text) => {
+    return {
+        type:UPDATEMESSAGE, newMessage:text
+    }
+}
 
 export default store;
