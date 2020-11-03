@@ -7,7 +7,8 @@ let initialState = {
         { id: 1, message: "What's going on here?", likesCount: 5 },
         { id: 2, message: "how are you?", likesCount: 10 },
     ],
-    newPostText: 'it-kamasutra'
+    newPostText: 'it-kamasutra.com',
+    profile: null
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -29,6 +30,9 @@ const profileReducer = (state = initialState, action) => {
             let stateCopy = {...state};
             stateCopy.newPostText = action.newText
             return stateCopy;
+        }
+        case SET_USER_PROFILE: {
+            return {...state,profile: action.profile}
         }
         default:
             return state;
