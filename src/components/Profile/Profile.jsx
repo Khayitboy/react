@@ -2,7 +2,7 @@ import React from 'react';
 import PostsContainer from './Posts/PostsContainer';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Content = (props) => {
+const Profile = (props) => {
   
 
     return (
@@ -13,4 +13,4 @@ const Content = (props) => {
     );
 }
 
-export default Content;
+export default Profile;

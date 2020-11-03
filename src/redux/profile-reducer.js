@@ -1,5 +1,6 @@
 const ADDPOST = 'ADD-POST';
 const UPDATEPOST = 'UPDATE-NEW-POST';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 let initialState = {
     posts: [
@@ -45,6 +46,13 @@ export const onPostChangeActionCreator = (text) => {
     return {
         type:UPDATEPOST,
         newText:text
+    }
+}
+
+export const setUserProfile = (profile) => {
+    return {
+        type:SET_USER_PROFILE,
+        profile
     }
 }
 

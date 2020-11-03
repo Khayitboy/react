@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { followAC, setCurrentPageAC, setTotalUsersCountAC, setUsers, toogleIsFetchingAC, unfollowAC } from '../../redux/users-reducer';
 import Users from './Users';
 import * as axios from 'axios';
-import preloader from './../../assets/images/loader.gif';
-import styles from './users.module.css';
 import Preloader from '../common/preloader/Preloader';
 
 class UsersContainer extends React.Component {
