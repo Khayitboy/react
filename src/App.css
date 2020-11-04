@@ -5,6 +5,9 @@
   list-style-type: none;
   text-decoration: none;
 }
+body{
+  font-family:arial;
+}
 .container{
   max-width:1200px;
   margin:0 auto;
@@ -81,4 +84,12 @@ footer{
 }
 .posts__form textarea:focus{
   box-shadow:1px 2px 5px #61DAFB;
+}
+.login_block a{
+  color: #61DAFB;
+}
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
