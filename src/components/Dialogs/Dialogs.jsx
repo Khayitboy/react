@@ -22,7 +22,6 @@ const Dialogs = (props) => {
         props.onMessageChange2(text);
     } 
 
-
     return (
         <div className={style.dialogs_wrapper}>
             <div className={style.users}>
