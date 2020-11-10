@@ -93,3 +93,10 @@ footer{
   align-items: center;
   justify-content: space-between;
 }
+
+.login_block{
+  color: antiquewhite;
+}
+.login_block button{
+  cursor: pointer;
+}
