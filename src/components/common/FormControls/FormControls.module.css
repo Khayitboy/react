@@ -1,5 +1,5 @@
 .formControl {
-
+    margin: 0;
 }
 
 .formControl.error input,.formControl.error textarea{
