@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { followAC, setCurrentPageAC, toggleFollowingProgress, unfollowAC, getUsersThunkCreator } from '../../redux/users-reducer';
+import { follow, setCurrentPageAC, toggleFollowingProgress, unfollow, getUsers } from '../../redux/users-reducer';
 import Users from './Users';
 import Preloader from '../common/preloader/Preloader';
 import { compose } from 'redux';
@@ -48,11 +48,11 @@ let mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps,
         {
-            follow: followAC,
-            unfollow: unfollowAC,
+            follow,
+            unfollow,
             setCurrentPage:setCurrentPageAC,
             toggleFollowingProgress,
-            getUsers: getUsersThunkCreator
+            getUsers
     
         }
         )
