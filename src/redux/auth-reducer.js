@@ -53,8 +53,8 @@ export const login = (email, password, rememberMe) => (dispatch) => {
         if(response.data.resultCode === 0){
             dispatch(getAuthUserData());
         } else{
-            let message = response.data.messages.length > 0 ? response.data.messages[0] : "Some errors";
-            dispatch(stopSubmit("login", {"email": message}));
+            let message = response.data.messages.length > 0 ? response.data.messages[0] : "Email or password incorrect";
+            dispatch(stopSubmit("login", {_error: message}));
         }
     });
 } 
