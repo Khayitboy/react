@@ -3,7 +3,6 @@ import styles from "./Paginator.module.css";
 
 
 let Paginator = (props) => {
-  debugger;
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
   let pages = [];
