@@ -7,7 +7,7 @@ import Post from './Post/Post';
 
 const Posts = React.memo((props) => {
     
-    let postsElem = props.posts.map((elem) => <Post likesCount={elem.likesCount} message={elem.message} />)
+    let postsElem = props.posts.map((elem) => <Post key={elem.id} likesCount={elem.likesCount} message={elem.message} />)
 
     let addPost2 = (formData) => {
         props.addPost(formData.newPostText);

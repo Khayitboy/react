@@ -14,13 +14,13 @@ let Paginator = (props) => {
   let [portionNumber, SetPortionNumber] = useState(1);
   let leftPortionPageNumber = (portionNumber - 1) * props.portionSize + 1;
   let rightPortionPageNumber = portionNumber * props.portionSize;
-
+  
   return (
     <div className={styles.paginator}>
       {portionNumber > 1 && 
         <button onClick={() => {SetPortionNumber(portionNumber - 1)}}>PREV</button>
       }
-      {pages.filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber).map((p) => {
+      {pages.filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber).map(p => {
         return (
           <span
             className={props.currentPage === p && styles.selectedPage}

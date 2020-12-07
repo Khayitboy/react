@@ -1,3 +1,22 @@
 .description{
-    
+    display: flex;
+}
+.description .image{
+    margin-right: 30px;
+}
+.description input{
+    margin: 10px 0;
+}
+.contact{
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.description .image+div>div{
+    margin-bottom:5px;
+}
+.description form{
+    flex-grow: 1;
+}
+.contact{
+    padding-left: 0;
 }
