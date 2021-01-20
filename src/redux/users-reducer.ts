@@ -1,5 +1,5 @@
 import { usersAPI } from "../api/api";
-import { photosType, UserType } from "../types/types";
+import { UserType } from "../types/types";
 
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
@@ -101,7 +101,7 @@ type setCurrentPageActionType = {
   type: typeof SET_CURRENT_PAGE
   currentPage: number
 }
-export const setCurrentPageAC = (currentPage: number): setCurrentPageActionType => {
+export const setCurrentPage = (currentPage: number): setCurrentPageActionType => {
   return {
     type: SET_CURRENT_PAGE,
     currentPage: currentPage,
@@ -149,7 +149,7 @@ export const toggleFollowingProgress = (isFetching: boolean, userId: number): to
 export const getUsers = (page: number, pageSize: number) => {
   return async (dispatch: any) => {
     dispatch(toogleIsFetchingAC(true));
-    dispatch(setCurrentPageAC(page));
+    dispatch(setCurrentPage(page));
     let data = await usersAPI.getUsers(page, pageSize);
     dispatch(toogleIsFetchingAC(false));
     dispatch(setUsers(data.items));
